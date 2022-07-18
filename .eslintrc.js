@@ -8,5 +8,8 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  rules: { js: "always" },
+  rules: {
+    "import/extensions": ["error", "always"],
+    "lines-between-class-members": "off",
+  },
 };

@@ -1,5 +1,5 @@
-import Personaje from "./Personaje.js";
-import HtmlComponent from "./HtmlComponent.js";
+import Personaje from "../Personaje/Personaje.js";
+import HtmlComponent from "../HtmlComponents/HtmlComponent.js";
 
 class Asesor extends Personaje {
   asesorado;
