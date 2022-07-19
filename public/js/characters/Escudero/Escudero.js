@@ -1,6 +1,6 @@
 import Personaje from "../Personaje/Personaje.js";
-import HtmlComponent from "../HtmlComponents/HtmlComponent.js";
-import Luchador from "../Luchador/Luchador.js";
+import HtmlComponent from "../../components/HtmlComponents/HtmlComponent.js";
+import Luchador from "../../components/Luchador/Luchador.js";
 
 class Escudero extends Personaje {
   sirveA;

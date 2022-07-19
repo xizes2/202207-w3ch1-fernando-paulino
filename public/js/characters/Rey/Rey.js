@@ -1,5 +1,5 @@
 import Personaje from "../Personaje/Personaje.js";
-import HtmlComponent from "../HtmlComponents/HtmlComponent.js";
+import HtmlComponent from "../../components/HtmlComponents/HtmlComponent.js";
 
 class Rey extends Personaje {
   anyosReinado;
