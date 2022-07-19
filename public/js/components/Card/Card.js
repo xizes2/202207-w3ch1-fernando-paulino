@@ -1,20 +1,13 @@
+import Button from "../button/Button.js";
 import HtmlComponent from "../HtmlComponents/HtmlComponent.js";
 
 class Card extends HtmlComponent {
-  constructor(
-    parent,
-    name = "Daenerys",
-    family = "Targarys",
-    image = "daenerys.jpg",
-    age = "24",
-    state = "solteira"
-  ) {
+  constructor(parent, name, family, image, age) {
     super(parent, "li", "character col");
     this.name = name;
     this.family = family;
     this.image = image;
     this.age = age;
-    this.state = state;
 
     this.render();
   }
@@ -52,8 +45,39 @@ class Card extends HtmlComponent {
     infoList.appendChild(listElementAge);
 
     const listElementState = document.createElement("li");
-    listElementState.textContent = `Estado: ${this.state}`;
+    listElementState.textContent = "Estado: ";
     infoList.appendChild(listElementState);
+
+    const listElementThumbsDown = document.createElement("i");
+    listElementThumbsDown.className = "fas fa-thumbs-down";
+    listElementState.appendChild(listElementThumbsDown);
+
+    const listElementThumbsUp = document.createElement("i");
+    listElementThumbsUp.className = "fas fa-thumbs-up";
+    listElementState.appendChild(listElementThumbsUp);
+
+    const cardOverlay = document.createElement("div");
+    cardOverlay.className = "character__overlay";
+    divTitle.appendChild(cardOverlay);
+
+    const cardOverlayList = document.createElement("ul");
+    cardOverlayList.className = "list-unstyled";
+    cardOverlay.appendChild(cardOverlayList);
+
+    const listElementYears = document.createElement("li");
+    listElementYears.textContent = `Años de reinado:`;
+    cardOverlayList.appendChild(listElementYears);
+
+    const listElementWeapon = document.createElement("li");
+    listElementWeapon.textContent = "Arma ";
+    cardOverlayList.appendChild(listElementWeapon);
+
+    const listElementSkill = document.createElement("li");
+    listElementSkill.textContent = "Destreza ";
+    cardOverlayList.appendChild(listElementSkill);
+
+    new Button(cardOverlay, "Habla");
+    new Button(cardOverlay, "Muere");
   }
 }
 
