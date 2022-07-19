@@ -8,3 +8,5 @@ new HtmlComponent(mainDiv, "ul", "characters-list row list-unstyled");
 const cardList = document.querySelector(".characters-list.row.list-unstyled");
 
 new Card(cardList);
+new Card(cardList, "Conan", "Barbarian", "bronn.jpg", "32", "what he wants");
+new Card(cardList, "Ulu", "Kooks", "tyrion.jpg", "40", "sneaky sneaky");
